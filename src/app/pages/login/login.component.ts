@@ -37,7 +37,6 @@ export class LoginComponent {
         localStorage.setItem('token', response.token);
         localStorage.setItem('email',loginRequest.email);
         alert('¡Sesión Iniciada!');
-        console.log('Login successful!', response);
 
         // Redirige a la página principal u otra página después de iniciar sesión
         this.router.navigate(['/dashboard']);
