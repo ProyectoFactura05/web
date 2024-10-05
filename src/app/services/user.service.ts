@@ -9,7 +9,7 @@ import { UserResponse } from '../models/userResponse.interface';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = `${env.baseURL}user/getUser`;
+  private apiUrl = `${env.baseURL}user`;
 
   constructor(private http: HttpClient) {}
 
@@ -17,6 +17,6 @@ export class UserService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-    return this.http.get<UserResponse>(`${this.apiUrl}/${email}`, { headers });
+    return this.http.get<UserResponse>(`${this.apiUrl}/getUser/${email}`, { headers });
   }
 }
