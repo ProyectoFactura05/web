@@ -10,7 +10,7 @@ import { LoginResponse } from '../models/loginResponse.interface';
   providedIn: 'root'
 })
 export class LoginService {
-  private apiUrl = `${env.baseURL}user/login`;
+  private apiUrl = `${env.baseURL}auth/login`;
 
   constructor(private http: HttpClient) {}
 
